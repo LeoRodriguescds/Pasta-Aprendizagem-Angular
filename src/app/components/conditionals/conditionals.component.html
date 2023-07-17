@@ -1,0 +1,19 @@
+<div class="class">
+  <h2>Testando condicionais</h2>
+
+  <!-- Ele irá verificar se o canShow é um boolean truee, caso seja verdade o eleemento seerá mostrado -->
+  <p *ngIf="canShow">Estamos mostrando que isso foi permitido</p>
+
+  <!-- Se a variável name bater com a condicional o elemento h2 será mostrado na página -->
+  <h2 *ngIf="name === 'Leonardo'"> Se o {{name}} for igual a Leeonardo, essa frase será mostrada </h2>
+
+  <h2 *ngIf="name === 'Leonardo'; else nameNotFound "> Se o {{name}} for igual a Leeonardo, essa frase será mostrada </h2>
+
+  <!-- Caso a condicional de falso, o nameNotFFound será o selecionado a aparecer -->
+  <ng-template #nameNotFound>
+    <div>
+      <h2>O nome não correspondeu</h2>
+    </div>
+  </ng-template>
+
+</div>

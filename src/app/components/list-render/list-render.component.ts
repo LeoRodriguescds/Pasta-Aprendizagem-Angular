@@ -13,7 +13,8 @@ export class ListRenderComponent {
   animal: Animal = {
     name: 'teste',
     type: 'teste',
-    age: 0
+    age: 0,
+    id: 0
   }
 
   animalDetail = '';
@@ -27,8 +28,8 @@ export class ListRenderComponent {
   }
 
   removeAnimal(animal: Animal) {
-    console.log('Reemovendo...')
-    this.animals = this.listService.remove(this.animals, animal)
+    this.animals = this.animals.filter(anim => animal.name !== anim.name)
+    this.listService.remove(animal.id).subscribe();
   }
 
   getAnimals() {

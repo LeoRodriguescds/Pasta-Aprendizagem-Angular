@@ -5,12 +5,14 @@ import { FirstComponentComponent } from './components/first-component/first-comp
 import { ListRenderComponent } from './components/list-render/list-render.component';
 import { ConditionalsComponent } from './components/conditionals/conditionals.component';
 import { EmitterComponent } from './components/emitter/emitter.component';
+import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 
 const routes: Routes = [
   { path: '', component: FirstComponentComponent},
   { path: 'list', component: ListRenderComponent },
   { path: 'condicionals', component: ConditionalsComponent },
-  { path: 'emitter', component: EmitterComponent }
+  { path: 'emitter', component: EmitterComponent },
+  { path: 'list/:id', component: ItemDetailComponent }
 ];
 
 @NgModule({
